@@ -52,7 +52,7 @@ const TodoList = () => {
         </button>
       </div>
       <div className="task-container">
-        {taskList &&
+        {taskList.length ? (
           taskList.map((obj, index) => (
             <Card
               key={index}
@@ -61,7 +61,12 @@ const TodoList = () => {
               deleteTask={deleteTask}
               updateListArray={updateListArray}
             />
-          ))}
+          ))
+        ) : (
+          <div>
+            <h2>...Start creating your note</h2>
+          </div>
+        )}
       </div>
       <CreateTask toggle={toggle} modal={modal} save={saveTask} />
     </>
