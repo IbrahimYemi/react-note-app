@@ -64,7 +64,8 @@ const TodoList = () => {
           ))
         ) : (
           <div>
-            <h2>...Start creating your note</h2>
+            {' '}
+            <h2>...Start creating your note</h2>{' '}
           </div>
         )}
       </div>
